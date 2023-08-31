@@ -14,22 +14,24 @@ function App() {
     setContent(event.target.value);
   };
 
-  // 추가하기 버튼 클릭 시 실행
+  // 추가하기 버튼 클릭 시 content 추가
   const AddContent = () => {
     const newContent = {
-      id: toDo[toDo.length-1]+1,
+      id: toDo[toDo.length-1].id +1,
       content,
     };
     setToDo([...toDo, newContent]);
     setContent("");
-    console.log(toDo);
+    // console.log(newContent.id);
   };
 
   return (
     <div className="App">
       <div>
-        <input value={content} onChange={InputContent} />
-        <button onClick={AddContent}>추가하기</button>
+        <div className='add-input'>
+          <input type='text' value={content} onChange={InputContent} />
+          <button onClick={AddContent}>추가하기</button>
+        </div>
         <h1>Todo List</h1>
       </div>
       <div className='content-box-layout'>

@@ -5,13 +5,15 @@
   margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.add-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .content-box-layout {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .contenet-box {
